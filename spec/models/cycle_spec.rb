@@ -13,4 +13,3 @@ RSpec.describe Cycle, type: :model do
     expect(cycle).not_to be_public
   end
 end
-# git add . && git commit -m "created spec againts the public? method, includes checks for public_status true and false"
