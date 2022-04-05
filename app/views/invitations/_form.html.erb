@@ -1,0 +1,28 @@
+<%= form_with model: [@cycle, @invitation] do |f| %>
+    <div data-modal-target="content"  > 
+        <div class='text__wrapper' >
+            <h4 class="mx__2px" >Share cycle with a new Customer</h4>
+        </div>
+        <div class="">
+            <%= f.text_field :email, class: 'email__input', placeholder: 'Email Addresses...*' %>
+        </div>
+        <hr/>
+        <div class='text__wrapper' >
+            <h5 class="mx__2px" >Want to include message with the invite?</h5>
+        </div>
+        <div class="">
+            <%= f.text_field :message, class: 'message__input', placeholder: 'Please enter your message...' %>
+        </div>
+        <hr/>
+        <div class='text__wrapper' >
+            <h6 class="mx__2px" >You are about to share with the individuals above:</h6>
+            <ul>
+                <li class="muted mx__2px"><%= @cycle.name %></li>
+            </ul>
+        </div>
+        <hr/>
+        <div class='btn__wrapper' >
+            <%= f.submit 'SEND INVITATION', class: "invite__btn" %>
+        </div>
+    </div> 
+<% end %> 

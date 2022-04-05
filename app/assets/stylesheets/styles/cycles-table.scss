@@ -1,0 +1,37 @@
+@import "base/globals";
+@import "base/mixins";
+
+.cycles-table{
+    width: 100%;
+    max-width: 30rem;
+    margin: 4rem auto;
+    background-color: #262626;
+    border-radius: 3px;
+} 
+
+.cycles-table__header{
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+    border-bottom: solid 1px #666;
+}
+
+.cycles-table__content{
+    padding: 0.75rem 0;
+}
+
+.cycles-table__row{
+    padding: 0.75rem 2rem;
+    .cycle__link {
+        @include cycle-link;
+    }
+    
+    .cycle__link:hover{
+        color: $primary-color;
+        cursor: pointer;
+    }
+}
+
+.cycles-table__row:hover{
+    color: $primary-color;
+    cursor: pointer;
+}

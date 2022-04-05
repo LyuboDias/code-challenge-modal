@@ -1,8 +1,9 @@
+@import "base/globals";
+
 body{
   color: white;
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #111111;
-  --primary-color: #10f5db;
   height: 100vh;
   display: flex;
   flex-direction: column;
