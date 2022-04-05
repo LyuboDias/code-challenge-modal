@@ -15,9 +15,10 @@ class InvitationsController < ApplicationController
         @invitation.cycle_id = (params[:cycle_id])
         # if invitation is valid and saved -> redirect home
         if @invitation.save!
-            flash[:success] = 'Invitation created successfully'
+            flash[:success] = "Invitation created successfully"
             redirect_to root_path
         else
+            flash[:error] = "Invalid email format, please retry!"
             render :new
         end
     end
