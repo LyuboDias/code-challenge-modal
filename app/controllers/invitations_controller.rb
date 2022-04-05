@@ -14,6 +14,7 @@ class InvitationsController < ApplicationController
         @invitation.cycle_id = (params[:cycle_id])
         # if invitation is valid and saved -> redirect home
         if @invitation.save!
+            flash[:success] = 'Invitation created successfully'
             redirect_to root_path
         else
             render :new
